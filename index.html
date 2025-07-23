@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Crud System</title>
+</head>
+
+<body>
+    <h1 class="fw-bold text-center display-5 my-5 ">Crud System</h1>
+    <div class="container col-md-7 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="all_inputs row">
+                        <div class="col-md-6 mb-2 ">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name" id="meal-name">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Description" id="meal-description">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Category" id="meal-category">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Price" id="meal-price">
+
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-2">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Image URL" id="meal-pic">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="form-group">
+                            <button class="btn btn-warning form-control" id="addbtn">Add a dish</button>
+
+                            <div id="error-message" class="text-danger mt-2 none">Please fill in all fields.</div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                        <div class="form-group">
+                            <button class="btn btn-danger form-control" id="resetbtn">Reset All</button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-2">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <h3 class="text-center display-5 mb-5">Menu</h3>
+                <div class="card p-5 c2">
+                    <div id="actions" class="actions">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <h4 class="mt-3">
+                                    <i class="fa-solid fa-utensils text-warning me-2"></i>
+                                    <span id="count">0</span> Dishes
+                                </h4>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-grid">
+                                    <button type="button" id="deletebutton" class="btn btn-danger mt-3"> Delete
+                                        All</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="empty_product" class="alert alert-danger fw-bold text-center my-3">Add a Menu</div>
+
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>price</th>
+                                <th colspan="4">image</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="./js/main.js"></script>
+
+</html>
